@@ -130,3 +130,4 @@ dmypy.json
 
 # Other
 tokens/
+old/tokens/
