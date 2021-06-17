@@ -25,7 +25,7 @@ async def mute(ctx, member: discord.Member, *, reason=None):
 
         for channel in guild.channels:
             await channel.set_permissions(mutedRole, speak=False, send_messages=False, read_message_history=True, read_messages=True)
-    embed = discord.Embed(title="muted", description=f"{member.mention} was muted ", colour=discord.Colour.light_gray())
+    embed = discord.Embed(title="muted", description=f"{member.mention} was muted ", colour=discord.Colour.dark_red())
     embed.add_field(name="reason:", value=reason, inline=False)
     await ctx.send(embed=embed)
     await member.add_roles(mutedRole, reason=reason)
@@ -54,6 +54,10 @@ async def ts(ctx):
 @client.command()
 async def yt(ctx):
     await ctx.send('https://www.youtube.com/channel/UCentT7GsT0GKKtnKOP4Ew5g')
+
+@client.command()
+async def invite(ctx):
+    await ctx.send('https://discord.com/oauth2/authorize?client_id=804316713025929228&permissions=8&scope=bot')
 
 @client.command()
 async def meme(ctx):
