@@ -59,7 +59,7 @@ async def yt(ctx):
 async def invite(ctx):
     await ctx.send('https://discord.com/oauth2/authorize?client_id=804316713025929228&permissions=8&scope=bot')
 
-@client.command
+@client.command()
 @commands.has_permissions(ban_members=True)
 async def ban(ctx, member : discord.Member, *, reason: str = None):
     await member.ban(reason=reason)
