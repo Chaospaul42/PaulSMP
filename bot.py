@@ -16,8 +16,8 @@ async def ping(ctx):
 
 @client.command()
 async def mute(ctx, member : discord.Member):
-    var = discord.utils.get(ctx.guild.roles, name = "Muted")
-    member.add_role(var)
+    role = discord.utils.get(member.server.roles, name='Muted')
+    await client.add_roles(member, role)
 
 @client.command()
 async def info(ctx):
