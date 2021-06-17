@@ -80,6 +80,23 @@ async def meme(ctx):
     embed.set_image(url=imageurl)
     await ctx.send(embed=embed)
 
+@client.command()
+async def unban(ctx, *, member):
+    banned_users = await ctx.guild.bans ()
+    member_name, member_discriminator = member.split('#')
+
+    for ban_entry in banned_users:
+        user = ban_entry.user
+
+        if (user.name, user.discriminator) == (member_name, member_discriminator):
+            await ctx.guild.unban(user)
+            print (f'Yea, so I just unbanned {member} if that\'s okay :)')
+            embed=discord.Embed(title=f"Unbanning {member}")
+            embed.set_image(url="https://cdn.tixte.com/uploads/byzero.steals-code.tk/koypb4e0r9a.gif")
+            await ctx.send(embed=embed)
+            await user.send('https://discord.gg/2wdbfwPCAz')
+            return
+
 with open('tokens/token.txt','r') as file:
     TOKEN = file.read()
 client.run(TOKEN)
