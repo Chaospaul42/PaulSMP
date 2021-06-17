@@ -14,10 +14,22 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send("Pong!")
 
-@client.command()
-async def mute(ctx, member : discord.Member):
-    role = discord.utils.get(member.server.roles, name='Muted')
-    await client.add_roles(member, role)
+@client.command(description="Mutes the specified user.")
+@commands.has_permissions(manage_messages=True)
+async def mute(ctx, member: discord.Member, *, reason=None):
+    guild = ctx.guild
+    mutedRole = discord.utils.get(guild.roles, name="Gemuted")
+
+    if not mutedRole:
+        mutedRole = await guild.create_role(name="Gemutet")
+
+        for channel in guild.channels:
+            await channel.set_permissions(mutedRole, speak=False, send_messages=False, read_message_history=True, read_messages=False)
+    embed = discord.Embed(title="muted", description=f"{member.mention} was muted ", colour=discord.Colour.light_gray())
+    embed.add_field(name="reason:", value=reason, inline=False)
+    await ctx.send(embed=embed)
+    await member.add_roles(mutedRole, reason=reason)
+    await member.send(f" you have been muted from: {guild.name} reason: {reason}")
 
 @client.command()
 async def info(ctx):
