@@ -15,6 +15,11 @@ async def ping(ctx):
     await ctx.send("Pong!")
 
 @client.command()
+async def mute(ctx, member : discord.Member):
+    var = discord.utils.get(ctx.guild.roles, name = "Muted")
+    member.add_role(var)
+
+@client.command()
 async def info(ctx):
     await ctx.send('Der Bot wurde von byZero und Paul gemacht - https://byzero.xyz')
 
@@ -28,7 +33,7 @@ async def twitch(ctx):
 
 @client.command()
 async def owner(ctx):
-    await ctx.send('Der Offizielle Server eigentümer ist <@703592068366467102> aber sonnst die alle die den <@799732215831330837>, den <@801706703619227668> und den <@795627691817959449> rang haben')
+    await ctx.send('Der Offizielle Server Eigentümer ist <@703592068366467102>')
 
 @client.command()
 async def ts(ctx):
