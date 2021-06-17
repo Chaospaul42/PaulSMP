@@ -21,10 +21,10 @@ async def mute(ctx, member: discord.Member, *, reason=None):
     mutedRole = discord.utils.get(guild.roles, name="Gemuted")
 
     if not mutedRole:
-        mutedRole = await guild.create_role(name="Gemutet")
+        mutedRole = await guild.create_role(name="Gemuted")
 
         for channel in guild.channels:
-            await channel.set_permissions(mutedRole, speak=False, send_messages=False, read_message_history=True, read_messages=False)
+            await channel.set_permissions(mutedRole, speak=False, send_messages=False, read_message_history=True, read_messages=True)
     embed = discord.Embed(title="muted", description=f"{member.mention} was muted ", colour=discord.Colour.light_gray())
     embed.add_field(name="reason:", value=reason, inline=False)
     await ctx.send(embed=embed)
