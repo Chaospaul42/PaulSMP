@@ -59,6 +59,15 @@ async def yt(ctx):
 async def invite(ctx):
     await ctx.send('https://discord.com/oauth2/authorize?client_id=804316713025929228&permissions=8&scope=bot')
 
+@client.command
+@commands.has_permissions(ban_members=True)
+async def ban(ctx, member : discord.Member, *, reason: str = None):
+    await member.ban(reason=reason)
+    print (f'Yea, so I just banned {member} if that\'s okay :)')
+    embed=discord.Embed(title=f"Banning {member}")
+    embed.set_image(url="https://cdn.tixte.com/uploads/byzero.steals-code.tk/koota42pn9a.gif")
+    await ctx.send(embed=embed)
+
 @client.command()
 async def meme(ctx):
     # Request:
