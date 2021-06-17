@@ -1,4 +1,5 @@
 import discord
+from discord.ext import commands
 import requests
 
 intents = discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = True)
@@ -9,35 +10,35 @@ client = commands.Bot(command_prefix = "!", intents = intents)
 async def on_ready():
     print("PaulSMP ist startklar")
 
-@client.command
+@client.command()
 async def ping(ctx):
     await ctx.send("Pong!")
 
-@client.command
+@client.command()
 async def info(ctx):
     await ctx.send('Der Bot wurde von byZero und Paul gemacht - https://byzero.xyz')
 
-@client.command
+@client.command()
 async def website(ctx):
     await ctx.send("Du findest meine Website unter: https://linktr.ee/Chaospaul__")
 
-@client.command
+@client.command()
 async def twitch(ctx):
     await ctx.send('https://www.twitch.tv/chaospaul__')
 
-@client.command
+@client.command()
 async def owner(ctx):
     await ctx.send('Der Offizielle Server eigentümer ist <@703592068366467102> aber sonnst die alle die den <@799732215831330837>, den <@801706703619227668> und den <@795627691817959449> rang haben')
 
-@client.command
+@client.command()
 async def ts(ctx):
     await ctx.send('Du findest meinen TeamSpeak-Server unter: PSMP')
 
-@client.command
+@client.command()
 async def yt(ctx):
     await ctx.send('https://www.youtube.com/channel/UCentT7GsT0GKKtnKOP4Ew5g')
 
-@client.command
+@client.command()
 async def meme(ctx):
     # Request:
     response = requests.get('https://evergene.io/api/memes/')
