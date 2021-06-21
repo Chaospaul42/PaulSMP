@@ -37,7 +37,7 @@ async def info(ctx):
 
 @client.command()
 async def website(ctx):
-    await ctx.send("Du findest meine Website unter: https://linktr.ee/Chaospaul__")
+    await ctx.send("Du findest meine Website unter: https://chaospaul.ml/ Danke an <@390965278470569985> ")
 
 @client.command()
 async def twitch(ctx):
@@ -49,7 +49,7 @@ async def owner(ctx):
 
 @client.command()
 async def ts(ctx):
-    await ctx.send('Du findest meinen TeamSpeak-Server unter: PSMP')
+    await ctx.send('Du findest meinen macher entweder auf seinenem eigenen TeamSpeak-Server: PSMP oder auf dem Teamspeak-Server von Sehrschlecht: Sehrschlecht.yt')
 
 @client.command()
 async def yt(ctx):
