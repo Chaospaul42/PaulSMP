@@ -38,7 +38,7 @@ async def info(ctx):
 @client.command()
 async def website(ctx):
     embed=discord.Embed(title="Meine Website", url="https://chaospaul.ml/", description="Schaut doch gerne auf meiner Webseite vorbei!", color=0xff000d)
-    embed.set_thumbnail(url="https://chaospaul.ml/image/me.png)"
+    embed.set_thumbnail(url="https://chaospaul.ml/image/me.png")
     embed.set_footer(text="Made by byZero")
     await ctx.send(embed=embed)
 
