@@ -40,7 +40,7 @@ async def website(ctx):
     await ctx.send("Du findest meine Website unter: https://chaospaul.ml/ Danke an <@390965278470569985> ")
 
 @client.command()
-async def Revo(ctx)
+async def Revo(ctx):
     await ctx.send('Reversers Youtube channel: https://www.youtube.com/channel/UC2aMNuJRUVEI5Znheda1PwQ und seinen Twitch channel: https://www.twitch.tv/reverser211')
 
 @client.command()
