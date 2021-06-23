@@ -41,6 +41,7 @@ async def website(ctx):
 
 @client.command()
 async def revo(ctx):
+    # hier findest du Reversers Yt channel
     await ctx.send('Reversers Youtube channel: https://www.youtube.com/channel/UC2aMNuJRUVEI5Znheda1PwQ und seinen Twitch channel: https://www.twitch.tv/reverser211')
 
 @client.command()
