@@ -37,7 +37,10 @@ async def info(ctx):
 
 @client.command()
 async def website(ctx):
-    await ctx.send("Du findest meine Website unter: https://chaospaul.ml/ Danke an <@390965278470569985> ")
+    embed=discord.Embed(title="Meine Website", url="https://chaospaul.ml/", description="Schaut doch gerne auf meiner Webseite vorbei!", color=0xff000d)
+    embed.set_thumbnail(url="https://chaospaul.ml/image/me.png%22)
+    embed.set_footer(text="Made by byZero")
+    await ctx.send(embed=embed)
 
 @client.command()
 async def revo(ctx):
