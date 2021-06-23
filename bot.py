@@ -52,7 +52,7 @@ async def owner(ctx):
     await ctx.send('Der Offizielle Server Eigentümer ist <@703592068366467102>')
 
 @client.command()
-    async def byzero(ctx):
+async def byzero(ctx):
         await ctx.send('Alle infos über ihn kannst du entweder mit /developer herausfinden oder auf https://byzero.ml')
 
 @client.command()
