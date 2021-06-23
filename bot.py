@@ -33,7 +33,7 @@ async def mute(ctx, member: discord.Member, *, reason=None):
 
 @client.command()
 async def info(ctx):
-    await ctx.send('Der Bot wurde von byZero und Paul gemacht - https://byzero.xyz')
+    await ctx.send('Der Bot wurde von byZero und Paul gemacht - https://byzero.ml')
 
 @client.command()
 async def website(ctx):
@@ -41,7 +41,7 @@ async def website(ctx):
 
 @client.command()
 async def Revo(ctx)
-    await ctx.send("Reversers Youtube channel: https://www.youtube.com/channel/UC2aMNuJRUVEI5Znheda1PwQ und seinen Twitch channel: https://www.twitch.tv/reverser211")
+    await ctx.send('Reversers Youtube channel: https://www.youtube.com/channel/UC2aMNuJRUVEI5Znheda1PwQ und seinen Twitch channel: https://www.twitch.tv/reverser211')
 
 @client.command()
 async def twitch(ctx):
@@ -51,6 +51,9 @@ async def twitch(ctx):
 async def owner(ctx):
     await ctx.send('Der Offizielle Server Eigentümer ist <@703592068366467102>')
 
+@client.command()
+    async def byZero(ctx):
+        await ctx.send('Alle infos über ihn kannst du entweder mit /developer herausfinden oder auf https://byzero.ml')
 @client.command()
 async def ts(ctx):
     await ctx.send('Du findest meinen macher entweder auf seinenem eigenen TeamSpeak-Server: PSMP oder auf dem Teamspeak-Server von Sehrschlecht: Sehrschlecht.yt')
