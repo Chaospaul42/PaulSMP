@@ -52,9 +52,9 @@ async def owner(ctx):
     await ctx.send('Der Offizielle Server Eigentümer ist <@703592068366467102>')
 
 @client.command()
-    async def byZero(ctx):
+    async def byzero(ctx):
         await ctx.send('Alle infos über ihn kannst du entweder mit /developer herausfinden oder auf https://byzero.ml')
-        
+
 @client.command()
 async def ts(ctx):
     await ctx.send('Du findest meinen macher entweder auf seinenem eigenen TeamSpeak-Server: PSMP oder auf dem Teamspeak-Server von Sehrschlecht: Sehrschlecht.yt')
