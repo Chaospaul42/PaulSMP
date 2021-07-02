@@ -72,6 +72,14 @@ async def invite(ctx):
     await ctx.send('https://discord.com/oauth2/authorize?client_id=804316713025929228&permissions=8&scope=bot')
 
 @client.command()
+async def zjysus(ctx):
+    await ctx.send('Alle infos über ihn kannst du auf https://solo.to/zjysus herausfinden')
+
+@client.command()
+async def chaoscharackter(ctx)
+    await ctx.send('ChaosCharackter Youtube channel: https://www.youtube.com/channel/UCjX8Ga5SmRyADMAJ559YUuw und seinen Twitch channel: https://www.twitch.tv/chaoscharakter')
+
+@client.command()
 @commands.has_permissions(ban_members=True)
 async def ban(ctx, member : discord.Member, *, reason: str = None):
     await member.ban(reason=reason)
