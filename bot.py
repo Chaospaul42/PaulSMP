@@ -67,16 +67,13 @@ async def ts(ctx):
 async def yt(ctx):
     await ctx.send('https://www.youtube.com/channel/UCentT7GsT0GKKtnKOP4Ew5g')
 
-@client.command()
-async def invite(ctx):
-    await ctx.send('https://discord.com/oauth2/authorize?client_id=804316713025929228&permissions=8&scope=bot')
 
 @client.command()
 async def zjysus(ctx):
     await ctx.send('Alle infos über ihn kannst du auf https://solo.to/zjysus herausfinden')
 
 @client.command()
-async def chaoscharackter(ctx)
+async def chaoscharackter(ctx):
     await ctx.send('ChaosCharackter Youtube channel: https://www.youtube.com/channel/UCjX8Ga5SmRyADMAJ559YUuw und seinen Twitch channel: https://www.twitch.tv/chaoscharakter')
 
 @client.command()
@@ -116,6 +113,8 @@ async def unban(ctx, *, member):
             await ctx.send(embed=embed)
             await user.send('https://discord.gg/2wdbfwPCAz')
             return
+
+
 
 with open('tokens/token.txt','r') as file:
     TOKEN = file.read()
